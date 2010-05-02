@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SQLSERVER" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="SQLSERVER (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SQLSERVER.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblNormaTableAdapter" GeneratorDataComponentClassName="tblNormaTableAdapter" Name="tblNorma" UserDataComponentName="tblNormaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLSERVER (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT row_number() over (order by n.NOMBRE desc) As NRO, 
+ n.NOMBRE As NOMBRE,
+ n.TIPO As TIPO,
+ n.NUMERO As NUMERO,
+ n.FECHA As FECHA, 
+n.NORMA As NORMA,
+ n.ESTADO As ESTADO 
+FROM (SELECT   distinct     tblNorma.sNombre_nm AS Nombre,
+                             (SELECT        sNombre_nm
+                               FROM            tblPNorma
+                               WHERE        (iPNorma_id = tblNorma.iPNorma_id)) AS Tipo, tblNorma.iNumero_nt AS Numero, tblNorma.dtFecha_dt AS Fecha, 
+                         (CASE WHEN tblNorma.iNorma_fl = 1 THEN 'Informativa' ELSE 'Cumplimiento' END) AS Norma, tblNorma.iEstado_fl AS Estado
+FROM            tblNorma INNER JOIN
+                         tblPNorma AS tblPNorma_1 ON tblNorma.iPNorma_id = tblPNorma_1.iPNorma_id) n</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Norma" DataSetColumn="Norma" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SQLSERVER (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="ReporteFill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="ReporteGetDataBy" GeneratorSourceName="ReporteFill" GetMethodModifier="Public" GetMethodName="ReporteGetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="ReporteGetDataBy" UserSourceName="ReporteFill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT row_number() over (order by n.NOMBRE asc) As NRO, 
+ n.NOMBRE As NOMBRE,
+ n.TIPO As TIPO,
+ n.NUMERO As NUMERO,
+ n.FECHA As FECHA, 
+n.NORMA As NORMA,
+ n.ESTADO As ESTADO 
+FROM (SELECT   distinct     tblNorma.sNombre_nm AS Nombre,
+                             (SELECT        sNombre_nm
+                               FROM            tblPNorma
+                               WHERE        (iPNorma_id = tblNorma.iPNorma_id)) AS Tipo, tblNorma.iNumero_nt AS Numero, tblNorma.dtFecha_dt AS Fecha, 
+                         (CASE WHEN tblNorma.iNorma_fl = 1 THEN 'Informativa' ELSE 'Cumplimiento' END) AS Norma, tblNorma.iEstado_fl AS Estado
+FROM            tblNorma INNER JOIN
+                         tblPNorma AS tblPNorma_1 ON tblNorma.iPNorma_id = tblPNorma_1.iPNorma_id INNER JOIN
+                         tblNormaClave ON tblNorma.iNorma_id = tblNormaClave.iNorma_id INNER JOIN
+                         tblPPalClave ON tblNormaClave.iPPalClave_id = tblPPalClave.iPPalClave_id
+WHERE        (tblNorma.dtFecha_dt = @fecha) OR
+                         (tblNorma.sNombre_nm LIKE @nombre) OR
+                         (tblNorma.iNumero_nt LIKE (case when @numero &lt;&gt; '' then '%'+@numero end)) OR
+                         ((tblNormaClave.iPPalClave_id = @idPalabra) AND (tblNormaClave.iNorma_id = tblNorma.iNorma_id))) n</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="fecha" ColumnName="dtFecha_dt" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="Fecha" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="nombre" ColumnName="sNombre_nm" DataSourceName="" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Nombre" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="numero" ColumnName="iNumero_nt" DataSourceName="" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@numero" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Numero" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="idPalabra" ColumnName="iPPalClave_id" DataSourceName="" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@idPalabra" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="iPPalClave_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblNorma" msprop:Generator_UserTableName="tblNorma" msprop:Generator_RowDeletedName="tblNormaRowDeleted" msprop:Generator_RowChangedName="tblNormaRowChanged" msprop:Generator_RowClassName="tblNormaRow" msprop:Generator_RowChangingName="tblNormaRowChanging" msprop:Generator_RowEvArgName="tblNormaRowChangeEvent" msprop:Generator_RowEvHandlerName="tblNormaRowChangeEventHandler" msprop:Generator_TableClassName="tblNormaDataTable" msprop:Generator_TableVarName="tabletblNorma" msprop:Generator_RowDeletingName="tblNormaRowDeleting" msprop:Generator_TablePropName="tblNorma">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="Norma" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Norma" msprop:Generator_ColumnVarNameInTable="columnNorma" msprop:Generator_ColumnPropNameInRow="Norma" msprop:Generator_ColumnPropNameInTable="NormaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NRO" msprop:Generator_UserColumnName="NRO" msprop:Generator_ColumnVarNameInTable="columnNRO" msprop:Generator_ColumnPropNameInRow="NRO" msprop:Generator_ColumnPropNameInTable="NROColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,270 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.4
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 09-04-2010 a las 19:46:47
+-- Versión del servidor: 3.23.32
+-- Versión de PHP: 5.2.2
+
+
+--
+-- Base de datos: `biblioteca`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ayuda`
+--
+
+
+create database biblioteca;
+
+use biblioteca;
+
+CREATE TABLE IF NOT EXISTS `ayuda` (
+  `id_ayuda` int(4) NOT NULL AUTO_INCREMENT,
+  `pregunta` text,
+  `respuesta` text,
+  PRIMARY KEY (`id_ayuda`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `ayuda`
+--
+
+INSERT INTO `ayuda` (`id_ayuda`, `pregunta`, `respuesta`) VALUES
+(1, 'Que necesito para poder utilizar la Biblioteca?', 'Primeramente para poder hacer uso de la Bibioteca, es necesario registrarse en el sitio, ingresando a la opcion Usuarios del menu principal y luego elegir la opcion de registrarse, donde aparecer‹ un formulario donde deberas llenar tus datos y enviarlos. Luego de eso podras hacer uso de todas las opciones de la Biblioteca entrando nuevamente a la opcion Usuario del menu principal, donde deberas y ingresar tu nombre de usuario y tu contraseÏa.'),
+(2, 'Como accedo al sitio?', 'Por medio de la URL: localhost/bilbioteca');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categoria`
+--
+
+CREATE TABLE IF NOT EXISTS `categoria` (
+  `id_cat` int(4) NOT NULL AUTO_INCREMENT,
+  `nom_cat` char(25) DEFAULT NULL,
+  `intro` text,
+  PRIMARY KEY (`id_cat`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id_cat`, `nom_cat`, `intro`) VALUES
+(1, 'Recursos', '<p>Aqui podras encontrar una gran variedad de recursos que te seran muy utiles</p>'),
+(2, 'Diccionarios', '<p>Aqui podras encontrar una gran variedad de recursos que te seran muy utiles</p>'),
+(3, 'Articulos', '<p>Aqui podras encontrar una gran variedad de recursos que te seran muy utiles</p>'),
+(4, 'Enciclopedias', 'Aqui podras encontrar una gran variedad de recursos que te seran muy utiles'),
+(5, 'Revistas', 'Aqui podras encontrar una gran variedad de recursos que te seran muy utiles'),
+(6, 'Sitios', 'Aqui podras encontrar una gran variedad de recursos que te seran muy utiles');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `configuracion`
+--
+
+CREATE TABLE IF NOT EXISTS `configuracion` (
+  `id` int(2) NOT NULL DEFAULT '0',
+  `descripcion` text,
+  `meta` text,
+  `titulo` char(80) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `configuracion`
+--
+
+INSERT INTO `configuracion` (`id`, `descripcion`, `meta`, `titulo`) VALUES
+(1, 'Biblioteca Virtual para uso educativo', 'Biblioteca vitual, Recursos, Enciclopedias, Educacion, Minga Digital', 'Biblioteca Virtual Minga Digital');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contacto`
+--
+
+CREATE TABLE IF NOT EXISTS `contacto` (
+  `id_contacto` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` char(60) DEFAULT NULL,
+  `email` char(60) DEFAULT NULL,
+  `mensaje` text,
+  `fecha` date DEFAULT NULL,
+  `bool_leido` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_contacto`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `contacto`
+--
+
+INSERT INTO `contacto` (`id_contacto`, `nombre`, `email`, `mensaje`, `fecha`, `bool_leido`) VALUES
+(1, 'Mario Vidal', 'mariovidal@yahoo.es', 'Buenas.\r\nLes  escribia  para felicitarles por la  iniciativa de realizar esta biblioteca virtual, que era muy importante y necesaria', '2008-06-06', 1),
+(2, 'Gabriela Irahola', 'gabriela.irahola@gmail.com', 'Hola, les escribia para agradecerles por haber elaborado esta biblioteca ya que resulta muy util', '2008-06-06', 0),
+(3, 'Cesar Hurtado', 'cesar68_2@hotmail.com', 'Muy buenas, gracias por la Biblioteca esta muy buena', '2008-06-06', 0),
+(4, 'Agapo', 'agapo@hotmail.com', 'Hola a todos', '2008-06-06', 0),
+(6, 'Maria Conchita', 'marcon@hotmail.com', 'El sitio esta muy bueno', '2008-06-06', 0),
+(7, 'Alejandro Parraga', 'alejandro_parraga@msn.com', 'Hola y gracias por el sitio,esta muy bueno', '2008-06-06', 0),
+(8, 'Juan Perez', 'juancitoperecito@hotmail.com', 'Sigan adelante', '2008-06-15', 1),
+(9, 'marcela', 'mfger@', 'hrtretewt', '2008-06-16', 1),
+(10, 'Jose Carlos', 'joseco48@mail.com', 'Hola a todos', '2008-12-05', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `recursoglobal`
+--
+
+CREATE TABLE IF NOT EXISTS `recursoglobal` (
+  `id_rec` int(6) NOT NULL AUTO_INCREMENT,
+  `nombre_rec` char(100) NOT NULL,
+  `desc_rec` text,
+  `url` char(100) NOT NULL,
+  `abriren` varchar(10) NOT NULL DEFAULT '_self ',
+  `cont_visitas` int(6) DEFAULT NULL,
+  `id_cat` int(4) DEFAULT NULL,
+  `id_subcat` int(5) DEFAULT NULL,
+  `fecha_insercion` date DEFAULT NULL,
+  `user_upload` int(6) DEFAULT NULL,
+  `tipo_rec` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id_rec`),
+  KEY `id_cat` (`id_cat`),
+  KEY `id_subcat` (`id_subcat`),
+  KEY `user_upload` (`user_upload`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `recursoglobal`
+--
+
+INSERT INTO `recursoglobal` (`id_rec`, `nombre_rec`, `desc_rec`, `url`, `abriren`, `cont_visitas`, `id_cat`, `id_subcat`, `fecha_insercion`, `user_upload`, `tipo_rec`) VALUES
+(1, 'Buscador Google', 'Este es un poderos donde podras realizar busqueda de cualquier tema o informacion sobre lo que necesites', 'http://www.google.com', '_self', NULL, 6, 15, '2008-06-17', 2, 0),
+(2, 'Buscador Yahoo', 'Buscador de informacion muy popular en todo el mundo', 'http://yahoo.es', '_blank', NULL, 6, 15, '2008-06-16', 1, 0),
+(5, 'Mundo marino', 'Vida de los mares', 'recursos/122559170608mundo_marino.ppt', '_blank', NULL, 3, 5, '2008-06-16', 1, 1),
+(6, 'Medir la temperatura', 'fisica,temperatura', 'recursos/123414170608MEDIR_LA_TEMPERATURA.doc', '_blank', NULL, 3, 2, '2008-06-16', 1, 1),
+(7, 'Palancas', 'fisica,palancas', 'recursos/123504170608palancas.pdf', '_blank', NULL, 3, 2, '2008-06-16', 1, 1),
+(8, 'Roma', 'Historia de Roma', 'recursos/123556170608ROMA.doc', '_blank', NULL, 3, 6, '2008-06-16', 1, 1),
+(9, 'Atlantida', 'Historia de Atlantida', 'recursos/123645170608Historia_de_la_Atlantida.doc', '_blank', NULL, 3, 6, '2008-06-16', 1, 1),
+(10, 'Que es Literatura', 'Literatura', 'recursos/123858170608Que_es_la_Literatura.doc', '_blank', NULL, 4, 16, '2008-06-16', 1, 1),
+(11, 'Shakespeare', 'Biografia de Shakespeare', 'recursos/123950170608William_Shakespeare.doc', '_blank', NULL, 4, 16, '2008-06-16', 1, 1),
+(12, 'Multiplicacion Hindu', 'multiplicacion', 'recursos/124045170608MultilplicacionHindu.pdf', '_blank', NULL, 3, 1, '2008-06-16', 1, 1),
+(13, 'Geometria', 'matematicas geometria', 'recursos/124241170608Geometria.pdf', '_blank', NULL, 4, 1, '2008-06-16', 1, 1),
+(14, 'Ley LOPE', 'Ley de Descentralizacion del Poder Ejecutivo', 'recursos/010225170608ley_LOPE.pdf', '_blank', NULL, 4, 10, '2008-06-17', 2, 1),
+(16, 'CPE', 'Constitucion Politica del Estado', 'recursos/010531170608constitucionpoliticadelestado.pdf', '_blank', NULL, 4, 3, '2008-06-18', 1, 1),
+(17, 'Ingenieria de Software', 'Trabajo sobre IS', 'recursos/07591051208Clase_001_-_Ing_SWOO.ppt', '_blank', NULL, 3, 17, '2008-12-05', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `subcategoria`
+--
+
+CREATE TABLE IF NOT EXISTS `subcategoria` (
+  `id_subcat` int(5) NOT NULL AUTO_INCREMENT,
+  `nom_subcat` char(30) NOT NULL,
+  `user_creador` int(6) DEFAULT '1',
+  PRIMARY KEY (`id_subcat`),
+  KEY `user_creador` (`user_creador`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `subcategoria`
+--
+
+INSERT INTO `subcategoria` (`id_subcat`, `nom_subcat`, `user_creador`) VALUES
+(1, 'Matem&aacute;ticas', 1),
+(2, 'Fisica', 1),
+(3, 'Ciencias Sociales', 1),
+(4, 'Computacion', 1),
+(5, 'Ciencias Naturales', 1),
+(6, 'Historia', 1),
+(7, 'Geografia', 1),
+(8, 'Qu&iacute;mica', 1),
+(9, 'Biologia', 1),
+(10, 'Civica', 1),
+(13, 'Informatica', 1),
+(14, 'Estadistica', 1),
+(15, 'Buscadores', 1),
+(16, 'Literatura', 1),
+(17, 'Ingenieria de Software', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `tipo_usuario` (
+  `id_tipousr` int(3) NOT NULL AUTO_INCREMENT,
+  `nombre_tipo` char(40) DEFAULT NULL,
+  `config` int(1) NOT NULL DEFAULT '0',
+  `categorias` int(1) NOT NULL DEFAULT '0',
+  `info` int(1) NOT NULL DEFAULT '0',
+  `user` int(1) NOT NULL DEFAULT '0',
+  `help` int(1) NOT NULL DEFAULT '0',
+  `contacto` int(1) NOT NULL DEFAULT '0',
+  `perfiles` int(1) NOT NULL DEFAULT '0',
+  `intro` int(1) DEFAULT '0',
+  PRIMARY KEY (`id_tipousr`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `tipo_usuario`
+--
+
+INSERT INTO `tipo_usuario` (`id_tipousr`, `nombre_tipo`, `config`, `categorias`, `info`, `user`, `help`, `contacto`, `perfiles`, `intro`) VALUES
+(1, 'Administrador', 1, 1, 1, 1, 1, 1, 1, 1),
+(2, 'Uploader', 0, 1, 1, 0, 0, 0, 0, 0),
+(3, 'Configurador', 1, 0, 0, 0, 1, 0, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id_user` int(6) NOT NULL AUTO_INCREMENT,
+  `nom_user` char(30) NOT NULL,
+  `apellido_user` char(20) NOT NULL,
+  `nick_user` varchar(15) NOT NULL,
+  `email` char(50) NOT NULL,
+  `tipo_user` int(3) NOT NULL,
+  `password` char(15) NOT NULL,
+  `boolactivo` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_user`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_user`, `nom_user`, `apellido_user`, `nick_user`, `email`, `tipo_user`, `password`, `boolactivo`) VALUES
+(1, 'Jose Carlos', 'Gutierrez', 'Manager', 'joseco48@gmail.com', 1, 'rootadmin', 1),
+(2, 'Marcela', 'Martinez', 'marcela', 'marcela_ms@hotmail.com', 2, 'otraadmin', 1),
+(3, 'Jaime David', 'Gaspa', 'jaimedavid', 'jpapitoj@hotmail.com', 2, 'otroadmin', 1),
+(4, 'CEFCEDFC', 'CEDCEDC', 'XZDECEF', 'CEDCEDC@.', 2, '111111', 0);
+
+--
+-- Filtros para las tablas descargadas (dump)
+--
+
+--
+-- Filtros para la tabla `recursoglobal`
+--
+ALTER TABLE `recursoglobal`
+  ADD CONSTRAINT `recursoglobal_ibfk_1` FOREIGN KEY (`id_cat`) REFERENCES `categoria` (`id_cat`),
+  ADD CONSTRAINT `recursoglobal_ibfk_2` FOREIGN KEY (`id_subcat`) REFERENCES `subcategoria` (`id_subcat`),
+  ADD CONSTRAINT `recursoglobal_ibfk_3` FOREIGN KEY (`user_upload`) REFERENCES `usuario` (`id_user`);
+
+--
+-- Filtros para la tabla `subcategoria`
+--
+ALTER TABLE `subcategoria`
+  ADD CONSTRAINT `subcategoria_ibfk_1` FOREIGN KEY (`user_creador`) REFERENCES `usuario` (`id_user`);
