@@ -216,8 +216,12 @@ padding-top:5px">
                         </ItemTemplate>
                     </asp:DataList>
                 
-                    <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="ConsultarTodosLosRegistros"
-                        TypeName="clsNorma"></asp:ObjectDataSource>
+                    <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="ConsultarPNorma"
+                        TypeName="clsNorma" OldValuesParameterFormatString="original_{0}">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="id" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
                     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ConsultarBusquedaAvanzadaPrincipal"
                         TypeName="clsNorma" OldValuesParameterFormatString="original_{0}">
                         <SelectParameters>

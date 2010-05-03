@@ -47,11 +47,11 @@ public partial class index : System.Web.UI.Page
         Response.Redirect("default.aspx");
     }
     protected void btnBuscar_Click(object sender, EventArgs e)
-    {        
+    {
         if (!txtBuscar.Text.Equals("") || rbtnPalClave.Checked || (rbtnFecha.Checked && !txtFecha.Text.Equals("")))
             DataList1.DataSourceID = "ObjectDataSource1";
         else
-            DataList1.DataSourceID = "ObjectDataSource3";
+            DataList1.DataSourceID = "ObjectDataSource3";//DataList1.DataSourceID = "ObjectDataSource3";
     }
     protected void PopCalendar_SelectionChanged(object sender, EventArgs e)
     {
