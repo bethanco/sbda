@@ -56,8 +56,8 @@
                     <asp:LinkButton ID="lnkRecuperarDatos" runat="server" OnClick="lnkRecuperarDatos_Click"> pulse aqui.</asp:LinkButton></td>
             </tr>
         </table>
-        <div class="footer">
-        <p>&copy; 2010 SBDA <a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
+         <div class="footer" style=" display:block">
+        <p>&copy; 2010<img alt="SBDA"  src="common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
         </div>
     </div>
     </form>

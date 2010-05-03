@@ -365,7 +365,8 @@ text-align:center;}
 .footer p{
 color:#4c5527;
 font-family:Arial, Helvetica, sans-serif;
-font-size:11px;}
+font-size:11px;
+}
 .footer2 a,
 .footer a{
 color:#2184b3;
@@ -473,4 +474,7 @@ padding:0px;}
 .aux p input, .aux input {
 height:20px;
 width:50px;
+}
+img{
+  behavior: url(iepngfix.htc);
 }
