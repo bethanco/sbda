@@ -83,27 +83,27 @@
             <tr >
                 <td style="width: 115px; height: 19px" class="label">
                     <asp:Label ID="lblBusquedaPor" runat="server" Text="Busqueda Por:"></asp:Label></td>
-                <td style="width: 134px; height: 19px">
+                <td style="width: 134px; height: 31px" class="left1">
                     <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
                         Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" OnCheckedChanged="rbtnPalClave_CheckedChanged" AutoPostBack="True" /></td>
-                <td style="width: 92px; height: 19px">
+                <td style="width: 92px; height: 19px" class="left1">
                     <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
-                <td style="width: 91px; height: 19px">
+                <td style="width: 91px; height: 19px" class="left1">
                     <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
-                <td style="width: 205px; height: 19px">
+                <td style="width: 205px; height: 19px" class="left1">
                     <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
                 <td style="width: 56px; height: 19px" class="label">
                     <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
-                <td style="width: 126px; height: 19px">
+                <td style="width: 126px; height: 19px" class="left1"> 
                     <asp:Label ID="lblComboNorma" runat="server" Text="Norma:"></asp:Label></td>
-                <td style="width: 111px; height: 19px">
+                <td style="width: 111px; height: 19px" class="left1">
                     <asp:Label ID="lblComboTipo" runat="server" Text="Tipo:"></asp:Label>
                     <asp:CheckBox ID="chkTodos" runat="server" Checked="True" Text="Todos" /></td>
             </tr>
             <tr>
                 <td style="width: 100px;">
                 </td>
-                <td style="width: 134px;">
+                <td style="width: 134px;"  >
                     <asp:DropDownList ID="cbPalClave" runat="server" DataSourceID="ObjectDataSource2"
                         DataTextField="NOMBRE" DataValueField="ID" Width="104px" BackColor="Transparent" ForeColor="Black" AutoPostBack="True" ValidationGroup="comboPal">
                     </asp:DropDownList></td>
