@@ -19,7 +19,7 @@
 <tbody>
 <tr>
 <td>
-<div class="center1" style="display:block" >
+<div class="center" style="display:block" >
     <form id="form1" runat="server" style="display:block">
     
     <div class="right">
@@ -65,22 +65,23 @@
                 <td style="width: 111px; height: 18px">
                 </td>
             </tr>
-            <tr>
+            <tr class="label">
                 <td style="width: 100px; height: 27px">
                 </td>
                 <td style="width: 134px; height: 27px">
                 <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label></td>
-                <td colspan="4" style="height: 27px">
+                <td colspan="4" style="height: 27px; margin-top:5px" >
                     <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
-                    <asp:Button ID="btnBuscar" runat="server" CommandName="Alternating" OnClick="btnBuscar_Click"
+                    <asp:Button ID="btnBuscar" runat="server"   CssClass="buscar" CommandName="Alternating" OnClick="btnBuscar_Click"
                         Text=""/></td>
                 <td style="width: 126px; height: 27px">
+                
                 </td>
                 <td style="width: 111px; height: 27px">
                 </td>
             </tr>
-            <tr>
-                <td style="width: 100px; height: 19px">
+            <tr >
+                <td style="width: 115px; height: 19px" class="label">
                     <asp:Label ID="lblBusquedaPor" runat="server" Text="Busqueda Por:"></asp:Label></td>
                 <td style="width: 134px; height: 19px">
                     <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
@@ -91,7 +92,7 @@
                     <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
                 <td style="width: 205px; height: 19px">
                     <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
-                <td style="width: 56px; height: 19px">
+                <td style="width: 56px; height: 19px" class="label">
                     <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
                 <td style="width: 126px; height: 19px">
                     <asp:Label ID="lblComboNorma" runat="server" Text="Norma:"></asp:Label></td>
@@ -110,10 +111,10 @@
                 </td>
                 <td style="width: 91px;">
                 </td>
-                <td style="width: 205px;">
+                <td style="width: 205px;" class="calendario">
                     <asp:TextBox ID="txtFecha" runat="server" Width="89px" ReadOnly="True"></asp:TextBox><rjs:PopCalendar
                         ID="PopCalendar1" runat="server" AutoPostBack="false" Control="txtFecha" OnSelectionChanged="PopCalendar_SelectionChanged"
-                        ValidationGroup="RJS.PopCalendars" />
+                        ValidationGroup="RJS.PopCalendars" /><br /><span style="color: rgb(153, 0, 0)">Haga click en el icono ^ </span>
                 </td>
                 <td style="width: 56px;">
                 </td>
