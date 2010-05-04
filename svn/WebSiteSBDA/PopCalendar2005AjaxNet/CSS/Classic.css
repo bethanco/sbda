@@ -5,7 +5,7 @@
 
 .ClassicStyle .TitleStyle
 {
-	background-color:#484f25;
+	background:url(Classic_Images/fondo.gif) no-repeat;
 }
 
 .ClassicStyle .TitleStyle table
@@ -16,7 +16,8 @@
 	font-weight:bold;  
 }
 .ClassicStyle .TitleStyle td span{
-	color:#5e6928;}
+	color:#fff;
+	text-transform:uppercase;}
 .ClassicStyle .TitleStyle td
 {
 	padding:2px;
@@ -26,17 +27,17 @@
 .ClassicStyle .TitleStyle .DropDownOutStyle
 {
 	cursor:default;
-	border-style:solid;
+	/*border-style:solid;
 	border-width:1px;
-	border-color:#6f7d2b;
+	border-color:#6f7d2b;*/
 }
 
 .ClassicStyle .TitleStyle .DropDownOverStyle
 {
 	cursor:default;
-	border-style:solid;
+	/*border-style:solid;
 	border-width:1px;
-	border-color:#88aaff;
+	border-color:#88aaff;*/
 }
 
 .ClassicStyle .TitleStyle .DropDownStyle img,
