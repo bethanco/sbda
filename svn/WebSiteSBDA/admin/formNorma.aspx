@@ -40,6 +40,7 @@
                                 <asp:RadioButtonList ID="rbtnListNorma" runat="server" RepeatDirection="Horizontal" SelectedValue='<%# Bind("NORMA") %>'>
                                 <asp:ListItem Value="1">Informativa</asp:ListItem>
                                 <asp:ListItem Value="2">Cumplimiento</asp:ListItem>
+                                    <asp:ListItem Value="3">Ambos</asp:ListItem>
                             </asp:RadioButtonList></td>
                     </tr>
                     <tr class="label">
