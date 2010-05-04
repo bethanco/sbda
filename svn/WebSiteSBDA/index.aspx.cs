@@ -11,6 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class index : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
         HttpCookie objCookie2 = Request.Cookies.Get("flag");        
@@ -22,7 +23,9 @@ public partial class index : System.Web.UI.Page
         DataSet dt = objNorma.ConsultarUltimaActualizacion();
         String str = dt.Tables[0].Rows[0].ItemArray[0] + "";
         if(!str.Equals(""))
-            this.lblDate.Text = str.Substring(0,10);        
+            this.lblDate.Text = str.Substring(0,10);
+
+        cbPalClave.BorderColor = System.Drawing.Color.Red;
     }
 
     protected void lnkLimpiar_Click(object sender, EventArgs e)
@@ -51,10 +54,35 @@ public partial class index : System.Web.UI.Page
         if (!txtBuscar.Text.Equals("") || rbtnPalClave.Checked || (rbtnFecha.Checked && !txtFecha.Text.Equals("")))
             DataList1.DataSourceID = "ObjectDataSource1";
         else
-            DataList1.DataSourceID = "ObjectDataSource3";//DataList1.DataSourceID = "ObjectDataSource3";
+            DataList1.DataSourceID = "ObjectDataSource3";
     }
     protected void PopCalendar_SelectionChanged(object sender, EventArgs e)
     {
         this.Validate("RJS.PopCalendars");
+    }
+    protected void rbtnPalClave_CheckedChanged(object sender, EventArgs e)
+    {       
+        cbPalClave.BorderColor = System.Drawing.Color.Red;
+        txtBuscar.BorderColor = System.Drawing.Color.White;
+        txtFecha.BorderColor = System.Drawing.Color.White;
+    }
+
+    protected void rbtnNombre_CheckedChanged(object sender, EventArgs e)
+    {
+        cbPalClave.BorderColor = System.Drawing.Color.White;
+        txtBuscar.BorderColor = System.Drawing.Color.Red;
+        txtFecha.BorderColor = System.Drawing.Color.White;
+    }
+    protected void rbtnNumero_CheckedChanged(object sender, EventArgs e)
+    {
+        cbPalClave.BorderColor = System.Drawing.Color.White;
+        txtBuscar.BorderColor = System.Drawing.Color.Red;
+        txtFecha.BorderColor = System.Drawing.Color.White;
+    }
+    protected void rbtnFecha_CheckedChanged(object sender, EventArgs e)
+    {
+        cbPalClave.BorderColor = System.Drawing.Color.White;
+        txtBuscar.BorderColor = System.Drawing.Color.White;
+        txtFecha.BorderColor = System.Drawing.Color.Red;
     }
 }

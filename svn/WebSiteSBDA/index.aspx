@@ -12,6 +12,7 @@
     <style type="text/css">
     img, div { behavior: url(common/image/iepngfix.htc) }
 </style> 
+
 </head>
 <body>
 
@@ -58,7 +59,7 @@
                 <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label>
                 </td>
                 <td colspan="3">
-                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px"></asp:TextBox>
+                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
                 </td>
                 <td class="buscar" >
                     <asp:Button ID="btnBuscar" runat="server" CommandName="Alternating" OnClick="btnBuscar_Click"
@@ -82,13 +83,13 @@
                     
                 <td class="left1 clave" style="width: 104px">
                     <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
-                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" /></td>
+                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" OnCheckedChanged="rbtnPalClave_CheckedChanged" AutoPostBack="True" /></td>
                 <td class="left1 nombre" style="width: 70px">
-                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" /></td>
+                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
                 <td class="left1 numero" style="width: 70px">
-                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" /></td>
+                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
                 <td class="left1 fecha" style="width: 140px">
-                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" /></td>
+                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
                 
                 <td class="label1 filtro" style="width: 50px">
                     <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
@@ -108,7 +109,7 @@
                 </td>
                 <td style="width: 104px" class="ambiente">
                     <asp:DropDownList ID="cbPalClave" runat="server" DataSourceID="ObjectDataSource2"
-                        DataTextField="NOMBRE" DataValueField="ID" Width="104px">
+                        DataTextField="NOMBRE" DataValueField="ID" Width="104px" BackColor="Transparent" ForeColor="Black" AutoPostBack="True" ValidationGroup="comboPal">
                     </asp:DropDownList></td>
                 
                <td style="width: 70px">
@@ -248,9 +249,13 @@ padding-top:5px">
                                 Type="String" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
+        <br />
                 
     </form>
     
+   </div>
+   <div>
+        
    </div>
    <div class="footer" style=" display:block">
         <p>&copy; 2010<img alt="SBDA"  src="common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
