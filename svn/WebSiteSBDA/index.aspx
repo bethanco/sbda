@@ -51,7 +51,7 @@
         </div>
          <br />
         <img src="common/image/logo sbda.png" alt="SBDA" />&nbsp;<br />
-        <div style="width: 100px; height: 100px" align="center">
+        <div align="center">
         <table style="width: 911px; height: 55px">
             <tr>
                 <td style="width: 100px; height: 18px">
