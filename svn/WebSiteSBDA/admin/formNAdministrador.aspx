@@ -74,7 +74,7 @@
     </div>
     </form>
      <div class="footer" style=" display:block">
-        <p>&copy; 2010<img alt="SBDA"  src="../common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
+        <p class="foot"> &copy; 2010 <img class="nofoot" alt="SBDA"  src="../common/image/footer_logo.jpg"/><a rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
         </div>
       </div>
 </body>
