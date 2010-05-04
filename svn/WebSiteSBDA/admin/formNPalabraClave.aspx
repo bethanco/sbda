@@ -13,32 +13,32 @@
     <br />
           <img src="../common/image/logo sbda.png" alt="SBDA" />
     <div  style=" text-align:center; padding-left:32%">
-        <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:100px" id="TABLE1">
+        <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:100px; width: 662px;" id="TABLE1">
             <tr class="label">
-                <td style="width: 100px">
+                <td style="width: 75px">
                         </td>
-                        <td class="leftdate" style="width: 170px" >
+                        <td class="leftdate" style="width: 207px" >
                     <p> <asp:Label ID="lblTitulo" runat="server" Text="Nuevo Registro"></asp:Label></p></td>
             </tr>
             <tr class="label">
-                <td  style="width: 101px; height: 24px" class="textAlignLeft">
+                <td  style="width: 75px; height: 24px" class="textAlignLeft">
                     <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label></td>
-                <td class="controlContac left label" style="height: 24px; width:191px">
+                <td class="controlContac left label" style="height: 24px; width:207px">
                     <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("NOMBRE") %>' MaxLength="49"></asp:TextBox>&nbsp;
                 </td>
             </tr>
             <tr>
-                <td style="width: 101px">
+                <td style="width: 75px">
                 </td>
-                <td  style="width:191px">
+                <td  style="width:207px">
                    <p class="insertar">  <asp:Button ID="btnInsertar" runat="server" OnClick="btnInsertar_Click" Text="" /></p>
-                    <p class="cancelar1"><asp:Button ID="btnCancelar" runat="server" PostBackUrl="~/admin/listaPNorma.aspx"
+                    <p class="cancelar1"><asp:Button ID="btnCancelar" runat="server" PostBackUrl="~/admin/listaPalabraClave.aspx"
                         Text="" /></p></td>
             </tr>
             <tr>
-                <td style="width: 5px">
+                <td style="width: 75px">
                 </td>
-                <td style="width: 101px">
+                <td style="width: 207px">
                 </td>
                 <td>
                     <asp:Label ID="lblMensaje" runat="server" Width="392px" ForeColor="#990000"></asp:Label></td>
