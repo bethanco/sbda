@@ -68,9 +68,9 @@
                     <asp:RadioButton ID="rbtnPalClave" runat="server" GroupName="buscar" Text="Palabra Clave" Checked="True" AutoPostBack="True" OnCheckedChanged="rbtnPalClave_CheckedChanged" /></td>
                 <td class="left1 nombre" style="width: 70px">
                     <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
-                <td class="left1 numero" style="width: 70px">
+                <td class="left1 numero" style="width: 90px">
                     <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
-                <td class="left1 fecha" style="width: 140px">
+                <td class="left1 fecha" style="width: 180px">
                     <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
             
                  
@@ -85,10 +85,10 @@
                 </td>
                 <td style="width: 70px">
                 </td>
-                <td style="width: 140px" class="calendario2">
+                <td style="width: 160px" class="calendario2">
                     &nbsp;<asp:TextBox ID="txtFecha" runat="server" Width="89px" ReadOnly="True" AutoPostBack="True"></asp:TextBox>
                     <rjs:PopCalendar ID="PopCalendar1" runat="server" AutoPostBack="false" Control="txtFecha"
-                        OnSelectionChanged="PopCalendar_SelectionChanged" ValidationGroup="RJS.PopCalendars" /><span style="color: rgb(153, 0, 0)">Haga click en el icono ^ </span>
+                        OnSelectionChanged="PopCalendar_SelectionChanged" ValidationGroup="RJS.PopCalendars" /><br /><span style="color: rgb(153, 0, 0)">Haga click en el icono ^ </span>
                 </td>
                   <td style="width: 50px">
                     </td>

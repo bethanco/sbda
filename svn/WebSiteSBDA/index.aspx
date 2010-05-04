@@ -22,7 +22,7 @@
 <div class="center" style="display:block" >
     <form id="form1" runat="server" style="display:block">
     
-    <div class="right">
+    <div class="rightIndex">
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
             <tr class="cyan">
                 <td style="height: 19px" >
@@ -160,7 +160,7 @@
         <br />
         <br />
         
-        <table cellpadding="0" cellspacing="0" border="0" class="mainTable2 " style="display:block">
+        <table cellpadding="0" cellspacing="0" border="0" class="mainTableIndex " style="display:block">
          
             <tr class="auxiliar">
                 <td colspan="3" style="height: 6px" class="label1">
