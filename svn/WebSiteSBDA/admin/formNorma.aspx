@@ -84,6 +84,13 @@
                             <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
                             </asp:ScriptManager>
                         </td>
+                        
+                    </tr>
+                    <tr>   <td style="width: 155px">
+                        </td>
+                    <td style="width: 105px"><span style="color: rgb(153, 0, 0)">* </span>
+                        </td>
+                    <td><span style="color: rgb(153, 0, 0)"> ^  Haga click en el icono</span></td>
                     </tr>
                     <tr class="label">
                         <td style="width: 5px; height: 22px">
