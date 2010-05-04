@@ -25,7 +25,7 @@ public partial class index : System.Web.UI.Page
         if(!str.Equals(""))
             this.lblDate.Text = str.Substring(0,10);
 
-        cbPalClave.BorderColor = System.Drawing.Color.Red;
+        cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
     }
 
     protected void lnkLimpiar_Click(object sender, EventArgs e)
@@ -61,8 +61,8 @@ public partial class index : System.Web.UI.Page
         this.Validate("RJS.PopCalendars");
     }
     protected void rbtnPalClave_CheckedChanged(object sender, EventArgs e)
-    {       
-        cbPalClave.BorderColor = System.Drawing.Color.Red;
+    {
+        cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
         txtBuscar.BorderColor = System.Drawing.Color.White;
         txtFecha.BorderColor = System.Drawing.Color.White;
     }
@@ -70,19 +70,20 @@ public partial class index : System.Web.UI.Page
     protected void rbtnNombre_CheckedChanged(object sender, EventArgs e)
     {
         cbPalClave.BorderColor = System.Drawing.Color.White;
-        txtBuscar.BorderColor = System.Drawing.Color.Red;
+        txtBuscar.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
         txtFecha.BorderColor = System.Drawing.Color.White;
     }
     protected void rbtnNumero_CheckedChanged(object sender, EventArgs e)
     {
         cbPalClave.BorderColor = System.Drawing.Color.White;
-        txtBuscar.BorderColor = System.Drawing.Color.Red;
+        txtBuscar.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
         txtFecha.BorderColor = System.Drawing.Color.White;
+        
     }
     protected void rbtnFecha_CheckedChanged(object sender, EventArgs e)
     {
         cbPalClave.BorderColor = System.Drawing.Color.White;
         txtBuscar.BorderColor = System.Drawing.Color.White;
-        txtFecha.BorderColor = System.Drawing.Color.Red;
+        txtFecha.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
     }
 }
