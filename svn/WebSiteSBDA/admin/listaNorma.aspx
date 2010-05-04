@@ -88,7 +88,7 @@
                 <td style="width: 140px" class="calendario2">
                     &nbsp;<asp:TextBox ID="txtFecha" runat="server" Width="89px" ReadOnly="True" AutoPostBack="True"></asp:TextBox>
                     <rjs:PopCalendar ID="PopCalendar1" runat="server" AutoPostBack="false" Control="txtFecha"
-                        OnSelectionChanged="PopCalendar_SelectionChanged" ValidationGroup="RJS.PopCalendars" />
+                        OnSelectionChanged="PopCalendar_SelectionChanged" ValidationGroup="RJS.PopCalendars" /><span style="color: rgb(153, 0, 0)">Haga click en el icono ^ </span>
                 </td>
                   <td style="width: 50px">
                     </td>
