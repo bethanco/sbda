@@ -152,6 +152,7 @@ margin:40px 0 0 15px;
 margin-left:100px;}
 .mainTable2{
 	width:900px;
+	*width:582px !important;
 	margin:20px auto;
 	/*border:1px solid #cfcfd4;*/
 	text-align:center;
@@ -184,6 +185,7 @@ font-family:Arial, Helvetica, sans-serif;
 font-size:12px;
 }
 .leftdate{
+*width:235px;
 float:left;
 padding-top:4px;}
 .required1{
@@ -219,7 +221,8 @@ color:#2184B3;
 font-size:12px;}
 
 .rigth{
-float:right;}
+float:right;
+}
 .title5 span
 {
 	font-family:Arial, Helvetica, sans-serif;
@@ -363,6 +366,7 @@ margin-right:45px;
 .right
 {
 	float:right;
+	*width:400px;
 
 	}
 .footer2{
@@ -441,6 +445,7 @@ top:260px;
 left:940px;
 }
 .auxiliar{
+*width:582px !important;
 position:absolute;
 top:350px;
 left:27%;}
