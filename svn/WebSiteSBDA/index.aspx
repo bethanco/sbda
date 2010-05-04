@@ -131,6 +131,7 @@
                         <asp:ListItem Selected="True" Value="0">Todos</asp:ListItem>
                         <asp:ListItem Value="1">Informativo</asp:ListItem>
                         <asp:ListItem Value="2">Cumplimiento</asp:ListItem>
+                        <asp:ListItem Value="3">Ambos</asp:ListItem>
                     </asp:DropDownList></td>
                 <td   class="cbtipo">
                     <asp:DropDownList ID="cbTipo" runat="server" DataSourceID="ObjectDataSource4" DataTextField="NOMBRE" DataValueField="ID">
