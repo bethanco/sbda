@@ -286,7 +286,15 @@ width:92px;
 height:23px;
 border:none;
 float:right;}
-.buscar {
+.buscar input{
+background:url(../image/buscar.png) no-repeat;
+width:92px !important;
+height:23px;
+border:none;
+float:right;
+margin-left:10px;
+}
+.buscar2 {
 background:url(../image/buscar.png) no-repeat;
 width:92px !important;
 height:23px !important;
