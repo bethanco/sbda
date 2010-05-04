@@ -207,10 +207,9 @@ padding-top:5px">
                
             </tr>
         </table>
-        
-                    <asp:DataList ID="DataList1" runat="server"  DataSourceID="ObjectDataSource3" CssClass="mainTable7"  >
+                    <asp:DataList ID="DataList1" runat="server" align="center"  DataSourceID="ObjectDataSource3" CssClass="mainTable7"  >
                         <ItemTemplate>
-                            <table cellpadding="0" cellspacing="0" border="0" style="display:block"  width="581px"class="mainTable3 ">
+                            <table cellpadding="0" cellspacing="0" border="0" style="display:block"   width="581px"class="mainTable3 ">
                                 <tr>
                                     <td style="width: 22px">
                                         <asp:Label ID="lblNro" runat="server" Text='<%# Eval("NRO") %>'></asp:Label></td>
@@ -232,7 +231,7 @@ padding-top:5px">
                             </table>
                         </ItemTemplate>
                     </asp:DataList>
-                
+              
                     <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="ConsultarPNorma"
                         TypeName="clsNorma" OldValuesParameterFormatString="original_{0}">
                         <SelectParameters>
@@ -265,8 +264,7 @@ padding-top:5px">
                                 Type="String" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
-        <br />
-                
+        <br /> 
     </form>
     
    </div>
