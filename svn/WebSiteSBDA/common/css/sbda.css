@@ -110,6 +110,15 @@ p{
 {
 	margin:70px 0 0 0;
 	}
+.foot
+{
+	margin-top: 70px;
+	vertical-align: bottom;
+}
+.nofoot
+{
+	margin-top: 0px !important; 
+}
 .center1 img
 {
 	margin:40px 0 0 150px;
