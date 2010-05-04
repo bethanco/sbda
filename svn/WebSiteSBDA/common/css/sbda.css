@@ -152,6 +152,12 @@ margin:40px 0 0 15px;
 margin-left:100px;}
 .mainTable2{
 	width:900px;
+	margin:20px auto;
+	/*border:1px solid #cfcfd4;*/
+	text-align:center;
+}
+.mainTableIndex{
+	width:900px;
 	*width:582px !important;
 	margin:20px auto;
 	/*border:1px solid #cfcfd4;*/
@@ -364,6 +370,11 @@ margin-right:45px;
 	height:191px;
 }
 .right
+{
+	float:right !important;
+	*width:900px;
+}
+.rightIndex
 {
 	float:right;
 	*width:400px;

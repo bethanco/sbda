@@ -38,7 +38,7 @@
           <br />
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="width: 332px">
             <tr class="left">
-                <td colspan="3" style="width: 143px" class="label1 title3"><asp:Label ID="lblTitulo" runat="server" Text="Lista de Normas"></asp:Label></td>
+                <td colspan="3" style="width: 143px" class="label1 title3"><asp:Label ID="lblTitulo" runat="server" Text="Lista de Tipos de Normas" Width="160px"></asp:Label></td>
                  
                 <td class="cyan" style="width: 40px"> <asp:HyperLink ID="lnkNuevo" runat="server" NavigateUrl="~/admin/formNPNorma.aspx" Width="47px">Nuevo</asp:HyperLink>
                 </td>
