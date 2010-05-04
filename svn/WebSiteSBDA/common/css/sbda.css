@@ -291,12 +291,11 @@ width:92px;
 height:23px;
 border:none;
 float:right;}
-.buscar input{
+.buscar {
 background:url(../image/buscar.png) no-repeat;
 width:92px !important;
-height:23px;
+height:23px !important;
 border:none;
-float:right;
 margin-left:10px;
 }
 .cancelar input{
@@ -415,10 +414,6 @@ top:304px;}
 .calendario2{
 position:absolute;
 top:304px;
-left:611px;}
-.calendario{
-position:absolute;
-top:260px;
 left:611px;}
 .calendario2 img,
 .calendario img{
