@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
      <link href="common/css/sbda.css" type="text/css" rel="stylesheet" />
     <title>Buscador SBDA</title>
     <style type="text/css">
@@ -15,7 +15,10 @@
 
 </head>
 <body>
-
+<table align="center" width="1200px">
+<tbody>
+<tr>
+<td>
 <div class="center1" style="display:block" >
     <form id="form1" runat="server" style="display:block">
     
@@ -47,104 +50,114 @@
         </table>
         </div>
          <br />
-        <img src="common/image/logo sbda.png" alt="SBDA" />
-         <br />
-        
-        <table cellpadding="0" cellspacing="0" border="0" class="mainTable ">
-            <tr class="label">
-                <td style="width: 15px">
+        <img src="common/image/logo sbda.png" alt="SBDA" />&nbsp;<br />
+        <div style="width: 100px; height: 100px" align="center">
+        <table style="width: 911px; height: 55px">
+            <tr>
+                <td style="width: 100px; height: 18px">
                 </td>
-            
-                <td colspan="1" >
-                <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label>
+                <td style="width: 134px; height: 18px">
                 </td>
-                <td colspan="3">
-                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
+                <td colspan="4" style="height: 18px">
                 </td>
-                <td class="buscar" >
-                    <asp:Button ID="btnBuscar" runat="server" CommandName="Alternating" OnClick="btnBuscar_Click"
-                        Text=""/></td>
-               
-                <td style="width: 472px">
+                <td style="width: 126px; height: 18px">
                 </td>
-                <td style="width: 409px">
+                <td style="width: 111px; height: 18px">
                 </td>
-                <td style="width: 461px">
-                </td>
-            </tr>
-            </table>
-            <table cellpadding="0" cellspacing="0" border="0" class="mainTable2 " style="display:block" >
-      
-            <tr  class="enlinea">
-                <td >
-                </td>
-                <td class="label1 busca" style="width: 90px">
-                    <asp:Label ID="lblBusquedaPor" runat="server" Text="Busqueda Por:"></asp:Label></td>
-                    
-                <td class="left1 clave" style="width: 104px">
-                    <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
-                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" OnCheckedChanged="rbtnPalClave_CheckedChanged" AutoPostBack="True" /></td>
-                <td class="left1 nombre" style="width: 70px">
-                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
-                <td class="left1 numero" style="width: 70px">
-                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
-                <td class="left1 fecha" style="width: 140px">
-                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
-                
-                <td class="label1 filtro" style="width: 50px">
-                    <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
-               
-                
-                <td class="left1 norma" style="width: 104px">
-                    &nbsp;<asp:Label ID="lblComboNorma" runat="server" Text="Norma:"></asp:Label></td>
-                <td class="left1 tipo" style="width: 140px">
-                    <asp:Label ID="lblComboTipo" runat="server" Text="Tipo:"></asp:Label></td>
             </tr>
             <tr>
-                <td >
+                <td style="width: 100px; height: 27px">
                 </td>
-                <td style="width: 90px">
-                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="ConsultarTodosLosRegistros"
-                        TypeName="clsPPalClave"></asp:ObjectDataSource>
+                <td style="width: 134px; height: 27px">
+                <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label></td>
+                <td colspan="4" style="height: 27px">
+                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
+                    <asp:Button ID="btnBuscar" runat="server" CommandName="Alternating" OnClick="btnBuscar_Click"
+                        Text=""/></td>
+                <td style="width: 126px; height: 27px">
                 </td>
-                <td style="width: 104px" class="ambiente">
+                <td style="width: 111px; height: 27px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100px; height: 19px">
+                    <asp:Label ID="lblBusquedaPor" runat="server" Text="Busqueda Por:"></asp:Label></td>
+                <td style="width: 134px; height: 19px">
+                    <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
+                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" OnCheckedChanged="rbtnPalClave_CheckedChanged" AutoPostBack="True" /></td>
+                <td style="width: 92px; height: 19px">
+                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
+                <td style="width: 91px; height: 19px">
+                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
+                <td style="width: 205px; height: 19px">
+                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
+                <td style="width: 56px; height: 19px">
+                    <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
+                <td style="width: 126px; height: 19px">
+                    <asp:Label ID="lblComboNorma" runat="server" Text="Norma:"></asp:Label></td>
+                <td style="width: 111px; height: 19px">
+                    <asp:Label ID="lblComboTipo" runat="server" Text="Tipo:"></asp:Label>
+                    <asp:CheckBox ID="chkTodos" runat="server" Checked="True" Text="Todos" /></td>
+            </tr>
+            <tr>
+                <td style="width: 100px;">
+                </td>
+                <td style="width: 134px;">
                     <asp:DropDownList ID="cbPalClave" runat="server" DataSourceID="ObjectDataSource2"
                         DataTextField="NOMBRE" DataValueField="ID" Width="104px" BackColor="Transparent" ForeColor="Black" AutoPostBack="True" ValidationGroup="comboPal">
                     </asp:DropDownList></td>
-                
-               <td style="width: 70px">
+                <td style="width: 92px;">
                 </td>
-                <td style="width: 70px">
+                <td style="width: 91px;">
                 </td>
-                <td style="width: 140px" class="calendario">
-                    
-                   <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
-                    </asp:ScriptManager>
+                <td style="width: 205px;">
                     <asp:TextBox ID="txtFecha" runat="server" Width="89px" ReadOnly="True"></asp:TextBox><rjs:PopCalendar
                         ID="PopCalendar1" runat="server" AutoPostBack="false" Control="txtFecha" OnSelectionChanged="PopCalendar_SelectionChanged"
-                        ValidationGroup="RJS.PopCalendars" /><span style=" color:#990000">Haga click en el icono ^ </span>
+                        ValidationGroup="RJS.PopCalendars" />
                 </td>
-                <td style="width: 50px">
-                    </td>
-               
-                <td style="width: 104px" class="cbnorma">
+                <td style="width: 56px;">
+                </td>
+                <td style="width: 126px;">
                     <asp:DropDownList ID="cbNorma" runat="server">
                         <asp:ListItem Selected="True" Value="0">Todos</asp:ListItem>
                         <asp:ListItem Value="1">Informativo</asp:ListItem>
                         <asp:ListItem Value="2">Cumplimiento</asp:ListItem>
                         <asp:ListItem Value="3">Ambos</asp:ListItem>
                     </asp:DropDownList></td>
-                <td   class="cbtipo">
+                <td style="width: 111px;">
                     <asp:DropDownList ID="cbTipo" runat="server" DataSourceID="ObjectDataSource4" DataTextField="NOMBRE" DataValueField="ID">
-                    </asp:DropDownList>
-                    <asp:CheckBox ID="chkTodos" runat="server" Checked="True" Text="Todos" />
+                    </asp:DropDownList></td>
+            </tr>
+            <tr>
+                <td style="width: 100px; height: 17px">
+                </td>
+                <td style="width: 134px; height: 17px">
+                </td>
+                <td style="width: 92px; height: 17px">
+                </td>
+                <td style="width: 91px; height: 17px">
+                </td>
+                <td style="width: 205px; height: 17px">
+                </td>
+                <td style="width: 56px; height: 17px">
+                </td>
+                <td style="width: 126px; height: 17px">
+                </td>
+                <td style="width: 111px; height: 17px">
+                </td>
+            </tr>
+        </table>
+        </div>
+        <br />
+        <br />
+                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="ConsultarTodosLosRegistros"
+                        TypeName="clsPPalClave"></asp:ObjectDataSource>
+                   <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+                    </asp:ScriptManager>
                     <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" SelectMethod="ConsultarTodosLosRegistros"
                         TypeName="clsPNorma"></asp:ObjectDataSource>
-                    </td>
-            </tr>
-            
-          
-        </table>
+        <br />
+        <br />
         
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable2 " style="display:block">
          
@@ -256,11 +269,18 @@ padding-top:5px">
     </form>
     
    </div>
-   <div>
-        
-   </div>
-   <div class="footer" style=" display:block">
-        <p>&copy; 2010<img alt="SBDA"  src="common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
+   <div></div>
+        </td>
+</tr>
+<tr>
+<td><div class="footer" style=" display:block">
+        <!--p-->&copy; 2010<img alt="SBDA"  src="common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a><!--/p-->
         </div>
+</td>
+</tr>
+</tbody>
+</table>
+   
+   
 </body>
 </html>
