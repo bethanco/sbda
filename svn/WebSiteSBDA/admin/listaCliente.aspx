@@ -37,7 +37,7 @@
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="width: 412px; height: 40px;">
             <tr class="left">
             <td colspan="3" style="width: 143px" class="label title3">
-                    <asp:Label ID="lblTitulo" runat="server" Text="Lista de Clientes"></asp:Label></td>
+                    <asp:Label ID="lblTitulo" runat="server" Text="Lista de Clientes" Width="100px"></asp:Label></td>
                 <td class="cyan" style="width: 40px">
                     <asp:HyperLink ID="lnkNuevo" runat="server" NavigateUrl="~/admin/formNCliente.aspx"
                         Width="47px">Nuevo</asp:HyperLink></td>
