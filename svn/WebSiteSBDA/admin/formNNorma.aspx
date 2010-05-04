@@ -35,7 +35,8 @@
                     <asp:Label ID="lblNorma" runat="server" Text="Norma:"></asp:Label></td>
                 <td class="clave new" style=" float:left">
                     <asp:RadioButton ID="rbtnInfor" runat="server" Checked="True" GroupName="norma" Text="Informativo" />
-                    <asp:RadioButton ID="rbtnCumpli" runat="server" GroupName="norma" Text="Cumplimiento" /></td>
+                    <asp:RadioButton ID="rbtnCumpli" runat="server" GroupName="norma" Text="Cumplimiento" />
+                    <asp:RadioButton ID="rbtnAmbos" runat="server" GroupName="norma" Text="Ambos" /></td>
             </tr>
             <tr class="label">
                 <td style="width: 5px">

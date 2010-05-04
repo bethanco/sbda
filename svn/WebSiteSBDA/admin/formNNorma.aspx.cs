@@ -63,7 +63,13 @@ public partial class admin_formNNorma : System.Web.UI.Page
             if (rbtnInfor.Checked)
                 objNorma.NORMA = "1";
             else
-                objNorma.NORMA = "2";
+            {
+                if(rbtnCumpli.Checked)
+                    objNorma.NORMA = "2";
+                else
+                    objNorma.NORMA = "3";
+            }
+                
 
             int identificador = objNorma.Insertar();
             InsertarPalabrasClaves(identificador);            
