@@ -51,8 +51,8 @@
         </div>
          <br />
         <img src="common/image/logo sbda.png" alt="SBDA" />&nbsp;<br />
-        <div align="center">
-        <table style="width: 911px; height: 55px">
+        <div align="center" >
+        <table style="width: 918px; height: 55px; margin-top:20px" class="fondoform">
             <tr>
                 <td style="width: 100px; height: 18px">
                 </td>
