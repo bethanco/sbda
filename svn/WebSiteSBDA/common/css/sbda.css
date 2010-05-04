@@ -108,7 +108,7 @@ p{
 }
 .center img
 {
-	margin:70px 0 0 0;
+	margin:70px 0 0 0;	
 	}
 .foot
 {
@@ -118,6 +118,7 @@ p{
 .nofoot
 {
 	margin-top: 0px !important; 
+	margin-left: 0px !important; 
 }
 .center1 img
 {

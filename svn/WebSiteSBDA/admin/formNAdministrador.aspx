@@ -15,14 +15,14 @@
     <div style=" text-align:center; padding-left:32%">
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="width: 652px">
             <tr class="label">
-                <td style="width: 95px">&nbsp;&nbsp;
+                <td style="width: 67px">&nbsp;&nbsp;
                 </td>
                 <td class="leftdate" style="width: 204px; float:right"><p>
                     <asp:Label ID="lblTitulo"  CssClass="required" runat="server" Text="Nuevo Registro"></asp:Label></p></td>
             </tr>
             <tr class="label">
                 
-                <td  style="width: 95px; height: 24px" class="textAlignLeft">
+                <td  style="width: 67px; height: 24px" class="textAlignLeft">
                     <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label></td>
                 <td class="controlContac left label" style="height: 24px; width:204px">
                     <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("NOMBRE") %>' MaxLength="50"></asp:TextBox>
@@ -30,7 +30,7 @@
             </tr>
             <tr class="label">
                 
-                <td  class="textAlignLeft" style="height: 24px; width: 95px;">
+                <td  class="textAlignLeft" style="height: 24px; width: 67px;">
                     <asp:Label ID="lblApellido" runat="server" Text="Apellido:"></asp:Label></td>
                 <td class="controlContac left label" style="height: 24px; width:204px">
                     <asp:TextBox ID="txtApellido" runat="server" MaxLength="50"></asp:TextBox>
@@ -38,7 +38,7 @@
             </tr>
             <tr class="label">
                 
-                <td class="textAlignLeft" style="height: 24px; width: 95px;">
+                <td class="textAlignLeft" style="height: 24px; width: 67px;">
                     <asp:Label ID="lblCuenta" runat="server" Text="Nombre Usuario:"></asp:Label></td>
                 <td class="controlContac left label" style="height: 24px; width:204px">
                     <asp:TextBox ID="txtCuenta" runat="server" MaxLength="50"></asp:TextBox>
@@ -46,7 +46,7 @@
             </tr>
             <tr class="label">
                 
-                <td class="textAlignLeft" style="height: 24px; width: 95px;">
+                <td class="textAlignLeft" style="height: 24px; width: 67px;">
                     <asp:Label ID="lblClave" runat="server" Text="Clave:"></asp:Label></td>
                 <td class="controlContac left label" style="height: 24px; width:204px">
                     <asp:TextBox ID="txtClave" runat="server" MaxLength="20"></asp:TextBox>
@@ -54,7 +54,7 @@
             </tr>
             <tr >
                
-                <td style="width: 95px">
+                <td style="width: 67px">
                         </td>
                  <td style="width:204px">
                     <p class="insertar">   <asp:Button ID="btnInsertar" runat="server" OnClick="btnInsertar_Click" Text="" /></p>
@@ -62,7 +62,7 @@
                         Text="" /></p></td>
             </tr>
             <tr>
-                <td style="width: 95px">
+                <td style="width: 67px">
                 </td>
                 <td style="width: 204px">
                 </td>

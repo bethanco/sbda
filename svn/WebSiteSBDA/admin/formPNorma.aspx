@@ -15,31 +15,31 @@
     <div  style=" text-align:center; padding-left:32%">
         <asp:FormView ID="FormView1" runat="server" DataSourceID="ObjectDataSource1">
             <ItemTemplate>
-        <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:100px">
+        <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:100px; width: 664px;">
             <tr class="label">
-               <td style="width: 100px">
+               <td style="width: 62px">
                         </td>
-                        <td class="leftdate" style="width: 170px" >
+                        <td class="leftdate" style="width: 226px" >
                     <p> <asp:Label ID="lblTitulo" runat="server" Text="Editando el Registro"></asp:Label></p></td>
             </tr>
             <tr class="label">
-                <td style="width: 101px; height: 24px" class="textAlignLeft">
+                <td style="width: 62px; height: 24px" class="textAlignLeft">
                     <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label></td>
-                <td class="controlContac left label" style="height: 24px; width:191px">
+                <td class="controlContac left label" style="height: 24px; width:226px">
                     <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("NOMBRE") %>' MaxLength="49"></asp:TextBox>
                     </td>
             </tr>
             <tr>
-                <td style="width: 101px">
+                <td style="width: 62px">
                 </td>
-                <td style="width:191px">
+                <td style="width:226px">
                    <p class="insertar">  <asp:Button ID="btnInsertar" runat="server" OnClick="btnInsertar_Click" Text="" /></p>
                    <p class="cancelar1"> <asp:Button ID="btnCancelar" runat="server" PostBackUrl="~/admin/listaPNorma.aspx" Text="" /></p></td>
             </tr>
             <tr>
-                <td style="width: 5px">
+                <td style="width: 62px">
                 </td>
-                <td style="width: 101px">
+                <td style="width: 226px">
                 </td>
                 <td>
                     <asp:Label ID="lblMensaje" runat="server" Width="392px" ForeColor="#990000"></asp:Label></td>
