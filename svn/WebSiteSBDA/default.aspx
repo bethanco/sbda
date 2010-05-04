@@ -14,13 +14,14 @@
         
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable tabla">
             <tr class="title">
-                <td >
+                <td style="width: 160px" >
                   <span>IDENTIFICACION  DE</span>
                 </td>
                 <td class="left">
                   <span>USUARIO</span>
                 </td>
-                
+                <td><span></span>
+                </td>
             </tr>
             
             <tr class="label">
@@ -28,36 +29,43 @@
                     <asp:Label ID="lblCuenta" runat="server" Text="Usuario:"></asp:Label></td>
                 <td style="width: 150px;">
                     <asp:TextBox ID="txtCuenta" runat="server"></asp:TextBox></td>
-                    <td></td>
+                    <td><span></span>
+                </td>
             </tr>
             <tr class="label">
                
-                <td style="width: 150px;">
+                <td style="width: 160px;">
                     <asp:Label ID="lblContrasena" runat="server" Text="Contraseña:"></asp:Label></td>
                 <td style="width: 170px;">
                     <asp:TextBox ID="txtContrasena" runat="server" TextMode="Password"></asp:TextBox></td>
-                      <td></td>
+                      <td><span></span>
+                </td>
             </tr>
             <tr class="butom">
                 
-               <td></td>
+               <td style="width: 160px"></td>
                 <td>
-                    <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="" /></td>
+                    <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="" />
+                </td><td><span></span></td>
             </tr>
-            <tr>
-                <td >
+            <tr class="butom">
+                <td style="width: 160px">
                     <asp:Label ID="lblError" runat="server" CssClass="messageError" ForeColor="#990000"></asp:Label></td>
+                <td>
+                <span></span>
+                </td>
             </tr>
             
             <tr class="recovery">
-                <td></td>
+                <td style="width: 160px"></td>
                 <td class="cyan">
                 <asp:Label ID="Label1" runat="server" Text="Olvido Alguno de sus datos?."></asp:Label> <br />
-                    <asp:LinkButton ID="lnkRecuperarDatos" runat="server" OnClick="lnkRecuperarDatos_Click"> pulse aqui.</asp:LinkButton></td>
+                    <asp:LinkButton ID="lnkRecuperarDatos" runat="server" OnClick="lnkRecuperarDatos_Click"> pulse aqui.</asp:LinkButton></td><td>
+                </td>
             </tr>
         </table>
          <div class="footer" style=" display:block">
-        <p>&copy; 2010<img alt="SBDA"  src="common/image/footer_logo.jpg"/><a  rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
+        <p class="foot"> &copy; 2010 <img class="nofoot" alt="SBDA"  src="common/image/footer_logo.jpg"/><a rel="nofollow" href="http://www.sbda.org.bo/" >www.sbda.org.bo</a></p>
         </div>
     </div>
     </form>
