@@ -117,11 +117,12 @@
                 <td style="width: 70px">
                 </td>
                 <td style="width: 140px" class="calendario">
+                    
                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
                     </asp:ScriptManager>
                     <asp:TextBox ID="txtFecha" runat="server" Width="89px" ReadOnly="True"></asp:TextBox><rjs:PopCalendar
                         ID="PopCalendar1" runat="server" AutoPostBack="false" Control="txtFecha" OnSelectionChanged="PopCalendar_SelectionChanged"
-                        ValidationGroup="RJS.PopCalendars" />
+                        ValidationGroup="RJS.PopCalendars" /><span style=" color:#990000">Haga click en el icono ^ </span>
                 </td>
                 <td style="width: 50px">
                     </td>
