@@ -16,8 +16,8 @@ public class clsCliente : CONB
 
     #region Propiedades
 
-        private String sNombre_nm, iUsuario_id, sApellido_nm, sCuenta_nm, sClave_nm, sCorreo_nm, sEstado_fl;
-
+    private String sNombre_nm, iUsuario_id, sApellido_nm, sCuenta_nm, sClave_nm, sCorreo_nm, sEstado_fl, sEmpresa_nm, sUrl_lista;
+    
     #endregion
 
     #region Variables y otros
@@ -70,6 +70,18 @@ public class clsCliente : CONB
             set { sApellido_nm = value; }
         }
 
+        public String URL
+        {
+            get { return sUrl_lista; }
+            set { sUrl_lista = value; }
+        }
+
+        public String EMPRESA
+        {
+            get { return sEmpresa_nm; }
+            set { sEmpresa_nm = value; }
+        }
+
     #endregion
 
     #region Metodos
@@ -78,12 +90,12 @@ public class clsCliente : CONB
 
             public DataSet ConsultarTodosLosRegistros()
             {
-                return this.EjecutarConsulta("SELECT row_number() over(order by tblCliente.sNombre_nm) As NRO, " + tabla + ".iUsuario_id As ID, " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sEstado_fl As ESTADO, " + tabla + ".sCorreo_nm As CORREO FROM " + tabla);
+                return this.EjecutarConsulta("SELECT row_number() over(order by tblCliente.sNombre_nm) As NRO, " + tabla + ".iUsuario_id As ID, " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sEstado_fl As ESTADO, " + tabla + ".sCorreo_nm As CORREO, " + tabla + ".sEmpresa_nm As EMPRESA, " + tabla + ".sUrl_lista As URL FROM " + tabla);
             }
 
             public DataSet ConsultarPorID(String id)
             {
-                return this.EjecutarConsulta("SELECT row_number() over(order by tblCliente.sNombre_nm) As NRO, " + tabla + ".iUsuario_id As ID, " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sCuenta_nm As CUENTA, " + tabla + ".sClave_nm As CLAVE, " + tabla + ".sEstado_fl As ESTADO, " + tabla + ".sCorreo_nm As CORREO FROM " + tabla + " WHERE " + tabla + ".iUsuario_id =" + id);
+                return this.EjecutarConsulta("SELECT row_number() over(order by tblCliente.sNombre_nm) As NRO, " + tabla + ".iUsuario_id As ID, " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sCuenta_nm As CUENTA, " + tabla + ".sClave_nm As CLAVE, " + tabla + ".sEstado_fl As ESTADO, " + tabla + ".sCorreo_nm As CORREO, " + tabla + ".sEmpresa_nm As EMPRESA, " + tabla + ".sUrl_lista As URL FROM " + tabla + " WHERE " + tabla + ".iUsuario_id =" + id);
             }
 
             public DataSet ConsultarDatos(String correo)
@@ -103,8 +115,8 @@ public class clsCliente : CONB
             public int Insertar()
             {
                 String sql = String.Format(
-                    "Insert into " + tabla + "(iUsuario_id,sNombre_nm,sApellido_nm,sCuenta_nm,sClave_nm,sCorreo_nm,sEstado_fl) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
-                    this.ID, this.NOMBRE, this.APELLIDO, this.CUENTA, this.CLAVE, this.CORREO, this.ESTADO);
+                    "Insert into " + tabla + "(iUsuario_id,sNombre_nm,sApellido_nm,sCuenta_nm,sClave_nm,sCorreo_nm,sEmpresa_nm,sUrl_lista,sEstado_fl) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+                    this.ID, this.NOMBRE, this.APELLIDO, this.CUENTA, this.CLAVE, this.CORREO, this.EMPRESA, this.URL, this.ESTADO);
                 return this.EjecutarDML(sql);
             }
 
@@ -114,7 +126,7 @@ public class clsCliente : CONB
 
             public int Modificar()
             {
-                String query = "UPDATE " + tabla + " SET " + tabla + ".sNombre_nm='" + this.NOMBRE + "', " + tabla + ".sApellido_nm='" + this.APELLIDO + "', " + tabla + ".sCuenta_nm='" + this.CUENTA + "', " + tabla + ".sClave_nm='" + this.CLAVE + "', " + tabla + ".sCorreo_nm='" + this.CORREO + "', " + tabla + ".sEstado_fl='" + this.ESTADO + "' WHERE " + tabla + ".iUsuario_id=" + this.ID;
+                String query = "UPDATE " + tabla + " SET " + tabla + ".sNombre_nm='" + this.NOMBRE + "', " + tabla + ".sApellido_nm='" + this.APELLIDO + "', " + tabla + ".sCuenta_nm='" + this.CUENTA + "', " + tabla + ".sClave_nm='" + this.CLAVE + "', " + tabla + ".sCorreo_nm='" + this.CORREO + "', " + tabla + ".sEmpresa_nm='" + this.EMPRESA + "', " + tabla + ".sUrl_lista='" + this.URL + "', " + tabla + ".sEstado_fl='" + this.ESTADO + "' WHERE " + tabla + ".iUsuario_id=" + this.ID;
                 return this.EjecutarDML(query);
             }
 
