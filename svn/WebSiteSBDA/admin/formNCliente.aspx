@@ -51,6 +51,26 @@
                     <asp:TextBox ID="txtCorreo" runat="server" MaxLength="50"></asp:TextBox></td>
             </tr>
             <tr class="label">
+                <td class="textAlignLeft" style="width: 69px; height: 24px">
+                    <asp:Label ID="lblEmpresa" runat="server" Text="Empresa:"></asp:Label></td>
+                <td class="controlContac left label" style="width: 216px; height: 24px">
+                    <asp:TextBox ID="txtEmpresa" runat="server" MaxLength="50"></asp:TextBox></td>
+            </tr>
+            <tr class="label">
+                <td class="textAlignLeft" style="width: 69px; height: 65px">
+                    <asp:Label ID="lblUrl" runat="server" Text="Lista Normas:"></asp:Label></td>
+                <td class="controlContac left label" style="width: 216px; height: 65px">
+                    <asp:TextBox ID="txtLista" runat="server" MaxLength="50"></asp:TextBox></td>
+                    <td style="height: 65px">
+                        <asp:FormView ID="FormView1" runat="server" DataKeyNames="galId" DefaultMode="Insert">
+                            <InsertItemTemplate>
+                                <asp:FileUpload ID="fullDoc" runat="server" Height="23px" Width="270px" />
+                                <br />
+                            </InsertItemTemplate>
+                        </asp:FormView>
+                        <asp:LinkButton ID="SubirDoc" runat="server" CssClass="cyan" OnClick="SubirDoc_Click">Subir Documento</asp:LinkButton></td>
+            </tr>
+            <tr class="label">
                 <td class="textAlignLeft" style="height: 24px; width: 69px;">
                     <asp:Label ID="lblActivo" runat="server" Text="Activo:"></asp:Label></td>
                 <td style="height: 24px; width: 216px;" class="aux" >
