@@ -70,7 +70,7 @@
                         <td class="textAlignLeft" style="width: 87px; height: 48px">
                             <asp:Label ID="lblLista" runat="server" Text="Lista Normas:"></asp:Label></td>
                         <td class="controlContac left label" style="width: 191px; height: 48px">
-                            <asp:TextBox ID="txtLista" runat="server" MaxLength="50" Text='<%# Bind("URL") %>'></asp:TextBox></td>
+                            <asp:TextBox ID="txtLista" runat="server" MaxLength="100" Text='<%# Bind("URL") %>' ReadOnly="True"></asp:TextBox></td>
                         <td style="height: 48px">
                             <asp:FormView ID="FormView1" runat="server" DataKeyNames="galId" DefaultMode="Insert">
                                 <InsertItemTemplate>
