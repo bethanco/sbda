@@ -18,6 +18,9 @@ public partial class index : System.Web.UI.Page
         String flag = objCookie2.Value;
         if(objCookie2.Value.Equals("0"))
             Response.Redirect("default.aspx");
+        HttpCookie objCookie3 = Request.Cookies.Get("url");
+        String url = objCookie3.Value;
+        this.lnkLista.NavigateUrl = url;
 
         clsNorma objNorma = new clsNorma();
         DataSet dt = objNorma.ConsultarUltimaActualizacion();

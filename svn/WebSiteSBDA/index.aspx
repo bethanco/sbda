@@ -39,14 +39,19 @@
         </table>
     
     </div>
-    <div class="leftdate">
-        <asp:Label ID="lblMensaje" runat="server" ForeColor="#990000"></asp:Label><table >
+    <div class="leftdate">        
+        <table ><tr><td colspan="2"><asp:Label ID="lblMensaje" runat="server" ForeColor="#990000"></asp:Label></td></tr>
             <tr>
                 <td >
                     <asp:Label ID="lblActualizacion" runat="server" Text="Ultima Actualizacion:"></asp:Label></td>
                 <td>
                     <asp:Label ID="lblDate" runat="server" ></asp:Label></td>
-            </tr>
+            </tr>            
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <asp:Label ID="Label1" runat="server" Text="Su lista de normas aplicables puede descargarlas   "></asp:Label><asp:HyperLink ID="lnkLista" CssClass="aqui" runat="server">Aqui</asp:HyperLink></td></tr>
         </table>
         </div>
          <br />
@@ -157,6 +162,7 @@
                     </asp:ScriptManager>
                     <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" SelectMethod="ConsultarTodosLosRegistros"
                         TypeName="clsPNorma"></asp:ObjectDataSource>
+        &nbsp;
         <br />
         <br />
         
@@ -209,7 +215,7 @@ padding-top:5px">
         </table>
                     <asp:DataList ID="DataList1" runat="server" align="center"  DataSourceID="ObjectDataSource3" CssClass="mainTable7"  >
                         <ItemTemplate>
-                            <table cellpadding="0" cellspacing="0" border="0" style="display:block"   width="581px"class="mainTable3 ">
+                            <table cellpadding="0" cellspacing="0" border="0" style="display:block"   width="581"class="mainTable3 ">
                                 <tr>
                                     <td style="width: 22px">
                                         <asp:Label ID="lblNro" runat="server" Text='<%# Eval("NRO") %>'></asp:Label></td>
