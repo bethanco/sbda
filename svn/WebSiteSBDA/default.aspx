@@ -43,10 +43,10 @@
             </tr>
             <tr class="butom">
                 
-               <td style="width: 160px"></td>
-                <td>
+               <td style="width: 160px; height: 25px;"></td>
+                <td style="height: 25px">
                     <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="" />
-                </td><td><span></span></td>
+                </td><td style="height: 25px"><span></span></td>
             </tr>
             <tr class="butom">
                 <td style="width: 160px">
