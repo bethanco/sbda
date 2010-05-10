@@ -98,6 +98,11 @@ public class clsCliente : CONB
                 return this.EjecutarConsulta("SELECT row_number() over(order by tblCliente.sNombre_nm) As NRO, " + tabla + ".iUsuario_id As ID, " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sCuenta_nm As CUENTA, " + tabla + ".sClave_nm As CLAVE, " + tabla + ".sEstado_fl As ESTADO, " + tabla + ".sCorreo_nm As CORREO, " + tabla + ".sEmpresa_nm As EMPRESA, " + tabla + ".sUrl_lista As URL FROM " + tabla + " WHERE " + tabla + ".iUsuario_id =" + id);
             }
 
+            public DataSet ConsultarUrlClientePorID(String id)
+            {
+                return this.EjecutarConsulta("SELECT " + tabla + ".sUrl_lista As URL FROM " + tabla + " WHERE " + tabla + ".iUsuario_id =" + id);
+            }
+
             public DataSet ConsultarDatos(String correo)
             {
                 return this.EjecutarConsulta("SELECT " + tabla + ".sNombre_nm As NOMBRE, " + tabla + ".sApellido_nm As APELLIDO, " + tabla + ".sCuenta_nm As CUENTA, " + tabla + ".sClave_nm As CLAVE FROM " + tabla + " WHERE " + tabla + ".sCorreo_nm='" + correo+"'");
