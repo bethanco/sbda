@@ -28,7 +28,7 @@ public partial class admin_formNNorma : System.Web.UI.Page
             return;
         String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
         //String ruta = "\\doc\\" + doc.FileName;
-        doc.SaveAs(Server.MapPath(ruta));        
+        doc.SaveAs(Server.MapPath(ruta));
         this.txtRuta.Text = "~/doc/" + doc.FileName;
     }
     protected void btnInsertar_Click(object sender, EventArgs e)
@@ -142,7 +142,6 @@ public partial class admin_formNNorma : System.Web.UI.Page
             correo.Body = "SBDA acaba de publicar la norma " + this.txtNombre.Text + " en la plataforma de busqueda.";
             correo.IsBodyHtml = false;
             correo.Priority = System.Net.Mail.MailPriority.Normal;
-            //
             System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient();
             smtp.Host = "mail.sbda.org.bo";
             //smtp.Port = 25;
