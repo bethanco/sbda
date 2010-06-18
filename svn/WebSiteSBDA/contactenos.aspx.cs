@@ -17,7 +17,7 @@ public partial class contactenos : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("default.aspx");
+            Response.Redirect("login.aspx");
     }
     protected void btnEnviar_Click(object sender, EventArgs e)
     {
@@ -80,6 +80,6 @@ public partial class contactenos : System.Web.UI.Page
     protected void lnkSalir_Click(object sender, EventArgs e)
     {
         //FormsAuthentication.SignOut();
-        Response.Redirect("default.aspx");
+        Response.Redirect("login.aspx");
     }
 }
