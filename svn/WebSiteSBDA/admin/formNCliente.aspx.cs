@@ -26,6 +26,7 @@ public partial class admin_formNCliente : System.Web.UI.Page
             return;
         String ruta = "\\WebSiteSBDA\\listas\\" + doc.FileName;
         //String ruta = "\\sbda.org.bo\\listas\\" + doc.FileName;
+        //String ruta = "\\listas\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));
         this.txtLista.Text = "~/listas/" + doc.FileName;
     }
