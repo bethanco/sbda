@@ -27,7 +27,7 @@ public partial class admin_formNNorma : System.Web.UI.Page
         if (doc.FileName.Equals(""))
             return;
         String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
-        //String ruta = "\\sbda.org.bo\\doc\\" + doc.FileName;
+        //String ruta = "\\doc\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));        
         this.txtRuta.Text = "~/doc/" + doc.FileName;
     }

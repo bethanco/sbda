@@ -52,6 +52,7 @@ public partial class admin_formNorma : System.Web.UI.Page
             return;
         String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
         //String ruta = "\\sbda.org.bo\\doc\\" + doc.FileName;
+        //String ruta = "\\doc\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));
         txtRuta.Text = "~/doc/" + doc.FileName;
     }
