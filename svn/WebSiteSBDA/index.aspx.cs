@@ -17,7 +17,7 @@ public partial class index : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");        
         String flag = objCookie2.Value;
         if(objCookie2.Value.Equals("0"))
-            Response.Redirect("default.aspx");
+            Response.Redirect("login.aspx");
         HttpCookie objCookie3 = Request.Cookies.Get("url");
         String url = objCookie3.Value;
         this.lnkLista.NavigateUrl = url;
@@ -50,7 +50,7 @@ public partial class index : System.Web.UI.Page
     }
     protected void lnkSalir_Click(object sender, EventArgs e)
     {        
-        Response.Redirect("default.aspx");
+        Response.Redirect("login.aspx");
     }
     protected void btnBuscar_Click(object sender, EventArgs e)
     {

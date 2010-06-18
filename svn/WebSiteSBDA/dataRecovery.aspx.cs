@@ -44,7 +44,7 @@ public partial class dataRecovery : System.Web.UI.Page
             try
             {
                 smtp.Send(correo);
-                Response.Redirect("default.aspx");
+                Response.Redirect("login.aspx");
             }
             catch (Exception ex)
             {
@@ -58,6 +58,6 @@ public partial class dataRecovery : System.Web.UI.Page
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("default.aspx");
+        Response.Redirect("login.aspx");
     }
 }
