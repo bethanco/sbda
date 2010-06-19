@@ -77,7 +77,7 @@
                 <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label></td>
                 <td colspan="4" style="height: 27px; margin-top:5px" >
                     <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
-                    <asp:Button ID="btnBuscar" runat="server"   CssClass="buscar2" CommandName="Alternating" OnClick="btnBuscar_Click"
+                    <asp:Button ID="btnBuscar" runat="server"   CssClass="buscar2" OnClick="btnBuscar_Click"
                         Text=""/></td>
                 <td style="width: 126px; height: 27px">
                 
