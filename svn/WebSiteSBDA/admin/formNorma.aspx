@@ -15,7 +15,7 @@
 <div class="center3" >
     <form id="form1" runat="server">
     <br />
-          <img src="../common/image/logo sbda.png" alt="SBDA" />
+          <img src="../common/image/logosbda2.jpg"  alt="SBDA" />
     <div class="center">
         <asp:FormView ID="FormView1" runat="server" CssClass="mainTable2" DataSourceID="ObjectDataSource1">
             <ItemTemplate>
