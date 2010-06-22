@@ -30,7 +30,7 @@
          </div>
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:443px">
         <tr class="left"><td colspan="3" style="width: 143px" class="label1 title3"><br />
-        <img src="../common/image/logo sbda.png" alt="SBDA" />
+        <img src="../common/image/logosbda2.jpg"  alt="SBDA" />
             </td></tr></table>
         <br />
         <br />
