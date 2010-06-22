@@ -16,7 +16,7 @@ public partial class admin_formNPNorma : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
     }
     protected void btnInsertar_Click(object sender, EventArgs e)
     {
