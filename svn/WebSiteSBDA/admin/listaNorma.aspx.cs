@@ -16,7 +16,7 @@ public partial class admin_listaNorma : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
 
         String id = Request.Params.Get("id");
         if (id != null)
@@ -24,7 +24,7 @@ public partial class admin_listaNorma : System.Web.UI.Page
             this.EliminarRegistro(id);
         }
 
-        cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
+        //cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
     }
 
     private void EliminarRegistro(String id)
@@ -49,7 +49,7 @@ public partial class admin_listaNorma : System.Web.UI.Page
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
         String fecha = this.txtFecha.Text;
-        fecha = fecha.Replace('-', '/');        
+        fecha = fecha.Replace('-', '/');
         if (!txtBuscar.Text.Equals("") || rbtnPalClave.Checked || rbtnFecha.Checked)
         {
             bool bool_palabra = this.rbtnPalClave.Checked;
