@@ -28,7 +28,7 @@ public partial class index : System.Web.UI.Page
         if(!str.Equals(""))
             this.lblDate.Text = str.Substring(0,10);
 
-        cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
+        //cbPalClave.BorderColor = System.Drawing.Color.FromArgb(153, 0, 0);
     }
 
     protected void lnkLimpiar_Click(object sender, EventArgs e)
