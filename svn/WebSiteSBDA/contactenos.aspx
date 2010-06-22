@@ -27,7 +27,7 @@
         </table>
      </div>
           <br />
-          <img src="common/image/logo sbda.png" alt="SBDA" />
+          <img src="common/image/logosbda2.jpg" alt="SBDA" />
      <div class="contac">
         <asp:Label ID="lblMensaje1" runat="server"></asp:Label><br />
         <br />
