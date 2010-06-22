@@ -10,7 +10,7 @@
 <body>
 <div class="center" >
     <form id="form1" runat="server"><br />
-          <img src="../common/image/logo sbda.png" alt="SBDA" />
+          <img src="../common/image/logosbda2.jpg" s alt="SBDA" />
     <div  style=" text-align:center; padding-left:32%">
         <table cellpadding="0" cellspacing="0" border="0" class="mainTable " style="margin-left:100px; width: 694px;">
             <tr class="label">
