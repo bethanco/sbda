@@ -293,7 +293,7 @@ margin-top:25px;
 float:left;
 margin-bottom:5px;}
 .examinar input{background:url(../image/examinar.png) no-repeat;
-width:92px;s
+width:92px;
 height:23px;
 border:none;
 margin-top:25px;
@@ -531,6 +531,7 @@ font-size:12px;
 color:#003300;
 text-align:justify;
 padding-left:40%;
+*padding-left:8%;
 margin-top:20px;}
 .logo1{padding-top: 40px;
 padding-bottom: 25px;}
