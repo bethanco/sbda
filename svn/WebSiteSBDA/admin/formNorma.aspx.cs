@@ -18,7 +18,7 @@ public partial class admin_formNorma : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
 
         this.IDEN = Request.Params.Get("id");
     }
@@ -50,9 +50,9 @@ public partial class admin_formNorma : System.Web.UI.Page
         FileUpload doc = (FileUpload)FormView1.FindControl("fullDoc");
         if (doc.FileName.Equals(""))
             return;
-        String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
+        //String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
         //String ruta = "\\sbda.org.bo\\doc\\" + doc.FileName;
-        //String ruta = "\\doc\\" + doc.FileName;
+        String ruta = "\\doc\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));
         txtRuta.Text = "~/doc/" + doc.FileName;
     }
