@@ -18,7 +18,7 @@ public partial class admin_formCliente : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
 
         this.IDEN = Request.Params.Get("id");
     }
@@ -29,9 +29,9 @@ public partial class admin_formCliente : System.Web.UI.Page
         FileUpload doc = (FileUpload)FormView1.FindControl("fullDoc");
         if (doc.FileName.Equals(""))
             return;
-        String ruta = "\\WebSiteSBDA\\listas\\" + doc.FileName;
+        //String ruta = "\\WebSiteSBDA\\listas\\" + doc.FileName;
         //String ruta = "\\sbda.org.bo\\listas\\" + doc.FileName;
-        //String ruta = "\\listas\\" + doc.FileName;
+        String ruta = "\\listas\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));
         txtLista.Text = "~/listas/" + doc.FileName;
     }

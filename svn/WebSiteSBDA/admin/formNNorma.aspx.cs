@@ -16,7 +16,7 @@ public partial class admin_formNNorma : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
 
         this.CargarCombos();
     }
@@ -26,8 +26,8 @@ public partial class admin_formNNorma : System.Web.UI.Page
         FileUpload doc = (FileUpload)FormView1.FindControl("fullDoc");
         if (doc.FileName.Equals(""))
             return;
-        String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
-        //String ruta = "\\doc\\" + doc.FileName;
+        //String ruta = "\\WebSiteSBDA\\doc\\" + doc.FileName;
+        String ruta = "\\doc\\" + doc.FileName;
         doc.SaveAs(Server.MapPath(ruta));
         this.txtRuta.Text = "~/doc/" + doc.FileName;
     }
@@ -45,17 +45,24 @@ public partial class admin_formNNorma : System.Web.UI.Page
             //aqui inserto un registro
             objNorma.NOMBRE = this.txtNombre.Text;
             objNorma.NUMERO = this.txtNumero.Text;
-            objNorma.FECHAACT = DateTime.Today.Day + "/" + DateTime.Today.Month + "/" + DateTime.Today.Year;
+            String str = DateTime.Today.Month + "";
+            if (str.Length == 1)
+                str = "0" + str;
+            objNorma.FECHAACT = DateTime.Today.Year + "" + str + "" + DateTime.Today.Day;
 
             if (!this.txtFecha.Text.Equals(""))
                 objNorma.FECHA = this.txtFecha.Text;
             else
                 objNorma.FECHA = objNorma.FECHAACT;
 
+            String year = objNorma.FECHA.Substring(6, 4);
+            String month = objNorma.FECHA.Substring(3, 2);
+            String day = objNorma.FECHA.Substring(0, 2);
+            objNorma.FECHA = year + "" + month + "" + day;
             HttpCookie objCookie1 = Request.Cookies.Get("idUsuario");
             String idUsuario = objCookie1.Value;
             objNorma.USUARIO = idUsuario;
-            if(rbtnSi.Checked)
+            if (rbtnSi.Checked)
                 objNorma.ESTADO = "si";
             else
                 objNorma.ESTADO = "no";
@@ -64,15 +71,14 @@ public partial class admin_formNNorma : System.Web.UI.Page
                 objNorma.NORMA = "1";
             else
             {
-                if(rbtnCumpli.Checked)
+                if (rbtnCumpli.Checked)
                     objNorma.NORMA = "2";
                 else
                     objNorma.NORMA = "3";
             }
-                
 
             int identificador = objNorma.Insertar();
-            InsertarPalabrasClaves(identificador);            
+            InsertarPalabrasClaves(identificador);
             this.EnviarAlertas();
             Response.Redirect("listaNorma.aspx");
         }
@@ -103,9 +109,9 @@ public partial class admin_formNNorma : System.Web.UI.Page
         for (int i = 0; i < n; i++)
         {
             cbTipoNorma.Items.Add((String)d.Tables[0].Rows[i].ItemArray[2]);
-        }        
+        }
     }
-    
+
     protected void btnAgregar_Click(object sender, EventArgs e)
     {
         if (lstParametros.SelectedItem == null)
@@ -115,7 +121,7 @@ public partial class admin_formNNorma : System.Web.UI.Page
         if (!lstPalClaves.Items.Contains(obj))
         {
             this.lstPalClaves.Items.Add(obj);
-        }        
+        }
     }
 
     protected void btnRemoverTodo_Click(object sender, EventArgs e)
@@ -167,9 +173,9 @@ public partial class admin_formNNorma : System.Web.UI.Page
     public bool ValidarNumero(String num)
     {
         int i = 0;
-        while(i<num.Length)
+        while (i < num.Length)
         {
-            String c = num[i]+"";
+            String c = num[i] + "";
             if (c != "0" && c != "1" && c != "2" && c != "3" && c != "4" && c != "5" && c != "6" && c != "7" && c != "8" && c != "9")
                 break;
             i++;
