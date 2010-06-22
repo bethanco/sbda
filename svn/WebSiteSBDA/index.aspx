@@ -76,7 +76,7 @@
                 <td style="width: 134px; height: 27px">
                 <asp:Label ID="lblBuscar" runat="server" Text="Busqueda"></asp:Label></td>
                 <td colspan="4" style="height: 27px; margin-top:5px" >
-                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px" AutoPostBack="True"></asp:TextBox>
+                    <asp:TextBox ID="txtBuscar" runat="server" Width="219px"></asp:TextBox>
                     <asp:Button ID="btnBuscar" runat="server"   CssClass="buscar2" OnClick="btnBuscar_Click"
                         Text=""/></td>
                 <td style="width: 126px; height: 27px">
@@ -90,13 +90,13 @@
                     <asp:Label ID="lblBusquedaPor" runat="server" Text="Busqueda Por:"></asp:Label></td>
                 <td style="width: 134px; height: 31px" class="left1">
                     <asp:RadioButton ID="rbtnPalClave" runat="server" Checked="True" GroupName="buscar"
-                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" OnCheckedChanged="rbtnPalClave_CheckedChanged" AutoPostBack="True" /></td>
+                        Text="Palabra Clave" BackColor="Transparent" BorderColor="DarkOliveGreen" ForeColor="#404000" /></td>
                 <td style="width: 92px; height: 19px" class="left1">
-                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" AutoPostBack="True" OnCheckedChanged="rbtnNombre_CheckedChanged" /></td>
+                    <asp:RadioButton ID="rbtnNombre" runat="server" GroupName="buscar" Text="Nombre" /></td>
                 <td style="width: 91px; height: 19px" class="left1">
-                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" AutoPostBack="True" OnCheckedChanged="rbtnNumero_CheckedChanged" /></td>
+                    <asp:RadioButton ID="rbtnNumero" runat="server" GroupName="buscar" Text="Numero" /></td>
                 <td style="width: 205px; height: 19px" class="left1">
-                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" AutoPostBack="True" OnCheckedChanged="rbtnFecha_CheckedChanged" /></td>
+                    <asp:RadioButton ID="rbtnFecha" runat="server" GroupName="buscar" Text="Fecha" /></td>
                 <td style="width: 56px; height: 19px" class="label">
                     <asp:Label ID="lblFiltros" runat="server" Text="Filtros:"></asp:Label></td>
                 <td style="width: 126px; height: 19px" class="left1"> 
@@ -110,7 +110,7 @@
                 </td>
                 <td style="width: 134px;"  >
                     <asp:DropDownList ID="cbPalClave" runat="server" DataSourceID="ObjectDataSource2"
-                        DataTextField="NOMBRE" DataValueField="ID" Width="104px" BackColor="Transparent" ForeColor="Black" AutoPostBack="True" ValidationGroup="comboPal">
+                        DataTextField="NOMBRE" DataValueField="ID" Width="104px" BackColor="Transparent" ForeColor="Black" ValidationGroup="comboPal">
                     </asp:DropDownList></td>
                 <td style="width: 92px;">
                 </td>
