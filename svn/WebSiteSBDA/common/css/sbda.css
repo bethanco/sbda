@@ -108,8 +108,9 @@ p{
 }
 .centerDefault
 {display:block;
+height:722px;
+width:1264px;
 	text-align:center;
-	background:url(../image/plantilla%20sbda.gif) no-repeat;
 	}
 .center img
 {
@@ -158,6 +159,14 @@ margin-left:100px;}
 .mainTable2{
 	width:900px;
 	margin:20px auto;
+	/*border:1px solid #cfcfd4;*/
+	text-align:center;
+}
+.mainTable8{
+	width:900px;
+	background:url(../image/plantilla%20sbda.gif) no-repeat;
+	margin:20px auto;
+	height:722px;
 	/*border:1px solid #cfcfd4;*/
 	text-align:center;
 }
@@ -512,3 +521,17 @@ background:url(../image/fondoform.jpg) no-repeat;}
 .aqui{
 color:#E3230A;
 text-decoration: underline;	}
+.frase{
+width:900px;
+height:140px;
+display:block;}
+.frase p{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#003300;
+text-align:justify;
+padding-left:40%;
+margin-top:20px;}
+.logo1{padding-top: 40px;
+padding-bottom: 25px;}
+.logo2{padding-left: 15px;}
