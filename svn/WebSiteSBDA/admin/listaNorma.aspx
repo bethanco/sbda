@@ -32,7 +32,7 @@
         </table>
         </div>
         <br />
-        <img src="../common/image/logo sbda.png" alt="SBDA" />
+        <img src="../common/image/logosbda2.jpg"  alt="SBDA" />
         <br />
           <br />
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
