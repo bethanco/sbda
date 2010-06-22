@@ -18,7 +18,7 @@ public partial class admin_formAdministrador : System.Web.UI.Page
         HttpCookie objCookie2 = Request.Cookies.Get("flag");
         String flag = objCookie2.Value;
         if (objCookie2.Value.Equals("0"))
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("~/login.aspx");
 
         this.IDEN = Request.Params.Get("id");
     }
