@@ -52,7 +52,7 @@ public partial class login : System.Web.UI.Page
         }
         else
         {
-            this.lblError.Text = "Datos incorrectos, intente nuevamente.";
+            this.lblError.Text = "Datos incorrectos, intente nuevamente."+"n: "+n+" "+this.txtCuenta.Text+","+ this.txtContrasena.Text;
         }
     }
     protected void lnkRecuperarDatos_Click(object sender, EventArgs e)
